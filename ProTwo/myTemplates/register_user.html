@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+{% extends "common_structure.html" %}
+
+
+{% block My_Block %}
+
+<br>
+
+    <div class="container form-floating"  >
+
+        <form method="POST" class=''>
+           
+            {{ f.as_p }}
+            {% csrf_token %}
+
+      
+
+            <input type="submit" value="Submit"/>
+
+
+        </form>
+
+
+    </div>
+    
+    {% endblock %}

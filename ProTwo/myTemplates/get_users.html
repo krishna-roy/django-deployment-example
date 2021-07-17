@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+
+{% extends "common_structure.html" %}
+{% load static %}
+{% load election_templates %}
+
+{% block My_Block %}
+
+
+       
+    <h1 align='center'>Here are Your Users</h1>
+    {% if all_users %}
+    <table border="solid 2px red" align="center">
+        <tr>
+
+    {% for i in all_users %}
+
+   
+       <td>
+        Userinfo
+
+        <ul>
+           <li>First_Name: {{ i.First_Name }}</li> 
+        
+        <li>Last_Name: {{ i.Last_Name }}</li>
+        
+        <li>Email_Id : {{ i.Email_Id|hide_email }}</li> 
+    </ul>
+</td> 
+{% if forloop.counter|divisibleby:5 %}
+</tr><tr>
+
+{% endif %}
+    
+
+    {% endfor %}
+
+    </tr>
+    </table>
+
+    {% endif %}
+    <img src="{% static "images/images.png" %}"/> 
+
+
+
+    {% endblock %}
+    

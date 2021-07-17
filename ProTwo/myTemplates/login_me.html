@@ -1,0 +1,33 @@
+{% extends 'common_structure.html' %}
+{% block My_Block %}
+
+<div class="container" align='center'> 
+
+<div class='jumbotron'>
+    <h1>
+        Employee Login
+    </h1>
+
+    <form action="{% url 'voter_list:login_employee' %}"method="POST">
+        {% csrf_token %}
+
+
+<label for='username'>UserName </label>
+<input type='text' name='username' placeholder="Enter Your Username"><br><br>
+<label for='password'>Password </label>
+
+<input type="password" name='password' placeholder="Password">
+<br>
+<br>
+<input type="submit" value="Login">
+
+    </form>
+
+<br>
+
+<a href="{% url "voter_list:register_employee" %}">Signup</a>
+</div>
+</div>
+
+
+{% endblock %}
