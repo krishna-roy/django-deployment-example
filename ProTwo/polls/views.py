@@ -35,10 +35,10 @@ def user_register(request):
 
 
 def help(request):
-    return render(request,"help.html",context={'email':'kroy@gmail.com','phone':'9903645833'})
+    return render(request,"help.html",context={'email':'kroy@gmail.com','phone':'9999999999'})
 
 def index(request):
-    return render(request,"help.html",context={'email':'kroy@gmail.com','phone':'9903645833'})
+    return render(request,"help.html",context={'email':'kroy@gmail.com','phone':'99999999999'})
 
 
 def register_employee(request):
@@ -70,7 +70,7 @@ def register_employee(request):
 
 
 def login_employee(request):
-    
+
     if request.method=='POST':
         username=request.POST.get('username')
         password=request.POST.get('password')
@@ -91,4 +91,4 @@ def login_employee(request):
 
 
     else:
-        return render(request,"login_me.html",{})    
+        return render(request,"login_me.html",{})
